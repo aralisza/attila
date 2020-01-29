@@ -15,17 +15,19 @@
 
 			<section class="post-content">
 				{{content}}
-
-                {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
-                {{#foreach tags}}
-                    <a href='{{ url }}'>
-                    <h2>{{ name }} <small>({{ count.posts }})</small></h2>
-                    </a>
-                {{/foreach}}
-                {{/get}}
 			</section>
 
 		</div>
+
+
+
+        {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+        {{#foreach tags}}
+            <a href='{{ url }}'>
+            <h2>{{ name }} <small>({{ count.posts }})</small></h2>
+            </a>
+        {{/foreach}}
+        {{/get}}
 	</article>
 </main>
 
