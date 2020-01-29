@@ -17,9 +17,11 @@
                 <ul>
                     {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
                     {{#foreach tags}}
-                        <a href='{{ url }}'>
-                        <li>{{ name }} <small>({{ count.posts }})</small></li>
-                        </a>
+
+                        <li>
+                            <a href='{{ url }}'><{{ name }} <small>({{ count.posts }})</small></a>
+                        </li>
+
                     {{/foreach}}
                     {{/get}}
                 </ul>
